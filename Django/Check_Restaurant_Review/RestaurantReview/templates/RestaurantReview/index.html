@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title> Titanic </title>
+
+  <script src="https://kit.fontawesome.com/47101d2035.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+    .center {
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: whitesmoke;
+       }
+  </style>
+</head>
+
+
+<body class="center">
+<div style="border: 2px solid black; border-radius: 10%; padding: 20px; margin: 20px; margin-top: 80px;">
+
+  <h1 style="color:black; font-weight: 700;">
+    Check Restaurant Review
+  </h1>
+
+  <p style="color:gray; font-weight: 700;">
+    Is the review given by customer good or bad?
+  </p>
+
+<hr>
+  
+<form action="result">
+    {% csrf_token %}
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Please Give Your Review and Remarks." required type="text" name="rev">
+    </div>
+
+    <hr>
+
+    <input class="btn btn-primary btn-lg" type="submit" onclick="myFunction()==true" value='Predict'>
+    <input class="btn btn-danger btn-lg" type="reset" value='Reset'>
+
+  </form>
+
+</div>
+</body>
+
+</html>
