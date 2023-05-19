@@ -25,7 +25,7 @@
 
 
 <body class="center">
-<div style="border: 2px solid black; border-radius: 10%; padding: 20px; margin: 20px; margin-top: 80px;">
+<div style="border: 2px solid black; border-radius: 10%; padding: 20px; margin: 20px;">
 
   <h1 style="color:black; font-weight: 700;">
     Check Restaurant Review
@@ -37,11 +37,11 @@
 
 <hr>
   
-<form action="result">
+<form action="result" method="post">
     {% csrf_token %}
 
     <div class="form-group">
-      <input class="form-control" placeholder="Please Give Your Review and Remarks." required type="text" name="rev">
+      <input class="form-control" placeholder="Please Give Your Review and Remarks." required type="text" name="new_review">
     </div>
 
     <hr>
