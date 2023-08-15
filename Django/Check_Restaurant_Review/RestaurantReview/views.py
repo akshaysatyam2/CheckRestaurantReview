@@ -44,7 +44,7 @@ def getPredictions(new_review):
 
 def result(request):
 
-    new_review = int(request.POST.get('new_review', False))
+    new_review = (request.POST.get('new_review', False))
     print(f"Fetched {new_review}")
 
     result = getPredictions(new_review)
